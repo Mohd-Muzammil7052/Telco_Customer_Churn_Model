@@ -14,14 +14,6 @@ with open("encoders.pkl","rb") as f:
 loaded_model = model_data['model']
 feature_names = model_data['feature_names']
 
-# Initialize encoders for categorical fields
-categorical_columns = [
-    'gender', 'SeniorCitizen', 'Partner', 'Dependents', 'PhoneService',
-    'MultipleLines', 'InternetService', 'OnlineSecurity', 'OnlineBackup',
-    'DeviceProtection', 'TechSupport', 'StreamingTV', 'StreamingMovies',
-    'Contract', 'PaperlessBilling', 'PaymentMethod'
-]
-
 # Create the Streamlit interface
 st.title("Customer Churn Prediction")
 st.write("Fill in the details below to predict customer churn:")
